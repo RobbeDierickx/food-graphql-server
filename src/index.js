@@ -1,6 +1,6 @@
-const { ApolloServer, gql } = require('apollo-server');
-const resolvers = require('./resolvers');
-const typeDefs = require('./typeDefs');
+const { ApolloServer, gql } = require("apollo-server");
+const resolvers = require("./resolvers");
+const typeDefs = require("./typeDefs");
 
 // ⚽️  Goal
 // --------
@@ -33,8 +33,7 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 // This `listen` method launches a web-server. Existing apps
 // can utilize middleware options.
-server.listen()
-  .then(({ url }) => {
+server.listen().then(({ url }) => {
     console.log(`🚀  Food GraphQL Server ready at ${url}.
 ⛄️  Go to this url to play with GraphQL in the GraphQL Playground.`);
-  });
+});
